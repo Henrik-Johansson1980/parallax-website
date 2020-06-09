@@ -1,0 +1,196 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", Arial, Helvetica, sans-serif;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 1.8;
+	color: #333;
+}
+
+h2 {
+    font-size: 2.6rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+p {
+	font-size: 1.8rem;
+}
+
+/*Menu*/
+
+#site-logo {
+	font-size: 4rem;
+	letter-spacing: 8px;
+	margin-left: 5rem;
+}
+
+nav {
+	height: 8vh;
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	margin-left: auto;
+	list-style-type: none;
+	margin-right: 5rem;
+}
+
+.menu li {
+	display: inline-block;
+	margin-right: 1rem;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+}
+
+#menu-btn {
+	display: none;
+}
+
+.menu li a {
+	color: #555555;
+	transition: all 0.5s ease;
+	text-decoration: none;
+	position: relative;
+}
+
+.menu li a:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -3px;
+	height: 2px;
+	width: 0;
+	background-color: #555555;
+	transition: all 0.5s ease;
+}
+
+.menu li a:hover:after,
+.menu li a:active:after,
+.menu li a:focus:after {
+	width: 100%;
+}
+
+/*Parallax Images*/
+
+.p-img-1 {
+	background: url("https://source.unsplash.com/1600x900/?city,night,skyline");
+	min-height: 100%;
+}
+.p-img-2 {
+	background: url("https://source.unsplash.com/1600x900/?city,afternoon,skyline");
+	min-height: 60vh;
+}
+.p-img-3 {
+	background: url("https://source.unsplash.com/1600x900/?city,morning,skyline");
+	min-height: 60vh;
+}
+
+.p-img-1,
+.p-img-2,
+.p-img-3 {
+	position: relative;
+	opacity: 0.7;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.p-text {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #111111;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	font-size: 4rem;
+	text-shadow: 1px 1px 3px #111111;
+}
+.p-text .border {
+	background-color: rgba(10, 10, 10, 0.7);
+	color: whitesmoke;
+	padding: 2rem;
+}
+
+.p-text .border.transparent {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+/* Content Sections*/
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 40vh;
+	padding: 2rem 0;
+}
+
+.section p {
+	max-width: 50%;
+}
+
+.section-light {
+	background-color: whitesmoke;
+}
+
+.section-dark {
+	background-color: #040218;
+	color: whitesmoke;
+}
+footer {
+	height: 30vh;
+	font-size: 1.6rem;
+	line-height: 30vh;
+	text-align: center;
+}
+
+/* Some Responsiveness*/
+@media all and (max-width: 568px) {
+    li.menu-item {
+        display: none;
+    }
+    
+    .menu {
+        margin-right: 1rem;
+    }
+    #menu-btn {
+        display: inline-block;
+        margin: 0;
+	}
+
+
+	p {
+		max-width: 100%;
+	}
+	.p-img-1,
+	.p-img-2,
+	.p-img-3 {
+		background-attachment: scroll;
+	}
+
+	.p-text {
+		font-size: 3rem;
+	}
+	.p-text .border {
+		padding: 0.5rem;
+	}
+}
